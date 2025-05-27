@@ -21,9 +21,7 @@ download_data <- function(year, destpath, quiet = FALSE, unzip_file = TRUE) {
   base_url <- "https://portal.inmet.gov.br/uploads/dadoshistoricos/"
 
   # Print file name
-  if (quiet == FALSE) {
-    cli::cli_alert_info(fs::path(base_url, year, ext = "zip"))
-  }
+  if (quiet == FALSE) cli::cli_alert_info(fs::path(base_url, year, ext = "zip"))
 
   # Download file
   curl::curl_download(
@@ -34,18 +32,14 @@ download_data <- function(year, destpath, quiet = FALSE, unzip_file = TRUE) {
 
   # Unzip file
   if (unzip_file == TRUE) {
-    if (quiet == FALSE) {
-      cli::cli_alert_info("Unziping file...")
-    }
+    if (quiet == FALSE) cli::cli_alert_info("Unziping file...")
 
     utils::unzip(
       zipfile = fs::path(destpath, year, ext = "zip"),
       exdir = destpath
     )
 
-    if (quiet == FALSE) {
-      cli::cli_alert_info("File unziped!")
-    }
+    if (quiet == FALSE) cli::cli_alert_info("File unziped!")
   }
 
   # Return
