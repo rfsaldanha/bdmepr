@@ -2,7 +2,8 @@ Package: bdmepr
 Title: Download and parse INMET BDMEP files.
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person("Raphael", "Saldanha", , "raphael.saldanha@fiocruz.br", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0652-8466"))
 Description: Functions to download and parse INMET BDMEP files.
 License: MIT + file LICENSE
 Encoding: UTF-8
