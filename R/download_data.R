@@ -1,3 +1,15 @@
+#' Download BDMEP files
+#'
+#' This function download BDMEP files from INMET
+#'
+#' @param year numeric. From 200 to current year.
+#' @param destpath character. Destination path to the file.
+#' @param quiet logical. Print messages and progress bar on console.
+#' @param unzip_file logical. Unzip file after downloading.
+#'
+#' @return The file list of the destination path.
+#' @export
+
 download_data <- function(year, destpath, quiet = FALSE, unzip_file = TRUE) {
   # Assertions
   checkmate::assert_numeric(

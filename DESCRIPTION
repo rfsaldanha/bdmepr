@@ -14,7 +14,9 @@ Imports:
     cli,
     curl,
     dplyr,
+    fs,
     lubridate,
+    RCurl,
     readr,
     rlang,
     utils

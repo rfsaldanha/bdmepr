@@ -1,3 +1,11 @@
+#' Parse BDMEP files
+#'
+#' This function parse BDMEP files from INMET
+#'
+#' @param file character. File path of the weather station data.
+#'
+#' @return A tibble.
+#' @export
 #' @importFrom rlang .data
 parse_bdmep <- function(file) {
   # Variables abbreviated names and types
