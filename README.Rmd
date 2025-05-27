@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# bdmepr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of bdmepr is to ...
+
+## Installation
+
+You can install the development version of bdmepr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("rfsaldanha/bdmepr")
+```
+
+## Example
+
+Download data from 2012
+
+```{r example}
+library(bdmepr)
+dest <- tempdir()
+
+res_download <- download_data(year = 2012, destpath = dest)
+res_download[10]
+```
+
+Parse data
+
+```{r}
+res <- parse_bdmep(file = res_download[10])
+
+res
+```

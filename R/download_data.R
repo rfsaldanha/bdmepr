@@ -55,5 +55,5 @@ download_data <- function(year, destpath, quiet = FALSE, unzip_file = TRUE) {
   }
 
   # Return
-  return(fs::dir_ls(path = destpath))
+  return(fs::dir_ls(path = destpath, recurse = TRUE))
 }
