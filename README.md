@@ -11,7 +11,7 @@ output: github_document
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bdmepr is to ...
+Functions to download and parse [BDMEP](https://bdmep.inmet.gov.br/) data from [INMET](https://portal.inmet.gov.br/).
 
 ## Installation
 
